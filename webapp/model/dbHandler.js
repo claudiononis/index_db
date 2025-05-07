@@ -55,7 +55,7 @@ sap.ui.define([], function () {
         var objectStore = transaction.objectStore(this._dbConfig.store);
         var request = objectStore.getAll();
         request.onsuccess = function (event) {
-          callback(event.target.result);
+          callback(event.target.result); // Devolvemos todos los datos
         };
       },
 
